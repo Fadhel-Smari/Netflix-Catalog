@@ -25,4 +25,7 @@ public class Watchlist {
         return medias.remove(media);
     }
 
+    public int size() {
+        return medias.size();
+    }
 }
