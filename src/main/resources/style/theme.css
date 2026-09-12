@@ -1,0 +1,61 @@
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-base: #141414;
+    -fx-background: #141414;
+    -fx-control-inner-background: #1f1f1f;
+    -fx-text-fill: #e5e5e5;
+}
+
+.title-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E50914;
+}
+
+.section-header {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.detail-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.detail-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #aaaaaa;
+}
+
+.detail-panel {
+    -fx-background-color: #181818;
+    -fx-border-color: #2b2b2b;
+    -fx-border-width: 1px;
+}
+
+.button {
+    -fx-background-color: #E50914;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #f6121d;
+}
+
+.text-area {
+    -fx-control-inner-background: #121212;
+    -fx-text-fill: #d2d2d2;
+}
+
+.text-field {
+    -fx-prompt-text-fill: #a0a0a0;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    -fx-prompt-text-fill: #707070;
+}
