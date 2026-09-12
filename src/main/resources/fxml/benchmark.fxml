@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maisonneuve.netflix.controller.BenchmarkController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15.0">
+            <children>
+                <Label styleClass="title-label" text="Benchmark des Tris" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Label text="Critère :" />
+                <ComboBox fx:id="comboCritere" prefWidth="150.0" />
+                <Label text="Répétitions :" />
+                <Spinner fx:id="spinnerRepetitions" prefWidth="90.0" />
+                <Button fx:id="btnLancer" onAction="#lancerBenchmark" text="Lancer la comparaison 🚀" />
+                <Button fx:id="btnReset" onAction="#reinitialiserBenchmark" text="Réinitialiser 🔄" />
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefWidth="250.0" spacing="12.0">
+            <children>
+                <Label style="-fx-font-weight: bold;" text="ALGORITHMES DE TRI" />
+                <CheckBox fx:id="chkBulle" text="Tri Bulle - O(n²)" />
+                <CheckBox fx:id="chkMerge" text="Tri Fusion - O(n log n)" />
+                <CheckBox fx:id="chkRapide" text="Tri Rapide - O(n log n)" />
+
+                <Separator prefWidth="200.0" />
+
+                <Label style="-fx-font-weight: bold;" text="Tailles Testées (N)" />
+                <Label text="300, 600, 1 200, 2 400, 4 800" wrapText="true" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </left>
+    <center>
+        <LineChart fx:id="graphique" animated="false" title="Temps d'exécution selon la taille (N)">
+            <xAxis>
+                <NumberAxis label="Taille (n)" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Temps (ns)" side="LEFT" />
+            </yAxis>
+        </LineChart>
+    </center>
+</BorderPane>
