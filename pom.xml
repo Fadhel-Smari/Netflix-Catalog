@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.maisonneuve.netflixcatalog/com.maisonneuve.netflix.HelloApplication
+                            <mainClass>com.maisonneuve.netflix/com.maisonneuve.netflix.MainFx
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
