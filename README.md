@@ -202,14 +202,14 @@ mvn javafx:run
 ![Benchmark](screenshots/benchmark.png)
 
 ### Écran de watchlist
-![Benchmark](screenshots/watchlist.png)
+![Watchlist](screenshots/watchlist.png)
 
 
 ---
 
 ## Historique Git
 
-* **Nombre total de commits** : 29
+* **Nombre total de commits** : 30
 * **Date du premier commit** : 02-09-2026
 * **Date du dernier commit** : 13-09-2026
 
