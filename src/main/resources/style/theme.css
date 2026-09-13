@@ -59,3 +59,27 @@
 .text-field:focused {
     -fx-prompt-text-fill: #707070;
 }
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 10px 0 0 0;
+    -fx-alignment: CENTER;
+    -fx-hgap: 30px;
+    -fx-vgap: 10px;
+}
+
+.chart-legend-item {
+    -fx-spacing: 8px;
+    -fx-padding: 0px;
+    -fx-alignment: CENTER-LEFT;
+}
+
+.chart-legend-item-symbol {
+    -fx-padding: 5px;
+    -fx-background-radius: 50%;
+}
+
+.chart-legend-item .text {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}

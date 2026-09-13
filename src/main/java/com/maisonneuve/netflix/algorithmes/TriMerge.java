@@ -8,7 +8,7 @@ public class TriMerge implements Algorithme {
 
     @Override
     public String nom() {
-        return "Tri par Fusion (Merge)";
+        return "Tri par Fusion";
     }
 
     @Override
