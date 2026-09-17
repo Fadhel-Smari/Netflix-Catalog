@@ -1,6 +1,8 @@
 module com.maisonneuve.netflix {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires org.postgresql.jdbc;
 
     exports com.maisonneuve.netflix;
     opens com.maisonneuve.netflix to javafx.fxml;
@@ -17,4 +19,5 @@ module com.maisonneuve.netflix {
     exports com.maisonneuve.netflix.service;
     exports com.maisonneuve.netflix.util;
     exports com.maisonneuve.netflix.algorithmes;
+    exports com.maisonneuve.netflix.dao;
 }
