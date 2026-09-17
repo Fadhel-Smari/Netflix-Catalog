@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class LecteurCSV implements SourceDonnees {
 
@@ -64,7 +65,7 @@ public class LecteurCSV implements SourceDonnees {
         }
 
         try {
-            String id = nettoyerChamps(champs[0]);
+            UUID id = UUID.fromString(nettoyerChamps(champs[0]));
             String type = nettoyerChamps(champs[1]);
             String titre = nettoyerChamps(champs[2]);
             int annee = parseInt(nettoyerChamps(champs[3]));
