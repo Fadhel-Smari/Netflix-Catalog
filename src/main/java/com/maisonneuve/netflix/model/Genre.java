@@ -3,17 +3,18 @@ package com.maisonneuve.netflix.model;
 public enum Genre {
     ACTION,
     ANIMATION,
-    BIOGRAPHIE,
     COMEDIE,
     CRIME,
     DOCUMENTAIRE,
     DRAME,
     FAMILLE,
     FANTASTIQUE,
-    GUERRE,
     HORREUR,
     MUSICAL,
+    MYSTERE,
+    REALITE,
     ROMANCE,
     SCIENCE_FICTION,
+    SPORT,
     THRILLER
 }
