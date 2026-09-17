@@ -1,7 +1,9 @@
 package com.maisonneuve.netflix.model;
 
+import java.util.UUID;
+
 public abstract class Media {
-    private String id;
+    private UUID id;
     private String titre;
     private int annee;
     private double note;
@@ -14,7 +16,7 @@ public abstract class Media {
     public Media() {
     }
 
-    public Media(String id, String titre, int annee, double note, Genre genre,
+    public Media(UUID id, String titre, int annee, double note, Genre genre,
                  String pays, String realisateur, String description, String titreOriginal) {
         this.id = id;
         this.titre = titre;
@@ -27,11 +29,11 @@ public abstract class Media {
         this.titreOriginal = titreOriginal;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

@@ -1,5 +1,7 @@
 package com.maisonneuve.netflix.model;
 
+import java.util.UUID;
+
 public class Serie extends Media {
     private int nbSaisons;
     private int nbEpisodes;
@@ -9,7 +11,7 @@ public class Serie extends Media {
         super();
     }
 
-    public Serie(String id, String titre, int annee, double note, Genre genre,
+    public Serie(UUID id, String titre, int annee, double note, Genre genre,
                  String pays, String realisateur, String description, String titreOriginal,
                  int nbSaisons, int nbEpisodes, StatutSerie statut) {
         super(id, titre, annee, note, genre, pays, realisateur, description, titreOriginal);

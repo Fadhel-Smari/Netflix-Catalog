@@ -1,5 +1,7 @@
 package com.maisonneuve.netflix.model;
 
+import java.util.UUID;
+
 public class Film extends Media {
     private int duree;
 
@@ -7,7 +9,7 @@ public class Film extends Media {
         super();
     }
 
-    public Film(String id, String titre, int annee, double note, Genre genre,
+    public Film(UUID id, String titre, int annee, double note, Genre genre,
                 String pays, String realisateur, String description, String titreOriginal, int duree) {
         super(id, titre, annee, note, genre, pays, realisateur, description, titreOriginal);
         this.duree = duree;
