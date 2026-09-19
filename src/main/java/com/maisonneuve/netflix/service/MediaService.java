@@ -6,21 +6,52 @@ import com.maisonneuve.netflix.model.Genre;
 import com.maisonneuve.netflix.model.Media;
 import com.maisonneuve.netflix.model.Serie;
 import com.maisonneuve.netflix.util.SourceDonnees;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 import java.util.stream.Collectors;
+import com.maisonneuve.netflix.dao.MediaDao;
+import com.maisonneuve.netflix.dao.MediaDaoPostgres;
+import java.util.*;
 
 public class MediaService {
-    private final List<Media> tousLesMedias;
+    private List<Media> tousLesMedias;
+    private final MediaDao mediaDao;
 
     public MediaService(SourceDonnees sourceDonnees) {
         this.tousLesMedias = sourceDonnees.chargerDonnees();
+        this.mediaDao = new MediaDaoPostgres();
     }
 
     public List<Media> getTousLesMedias() {
         return new ArrayList<>(tousLesMedias);
+    }
+
+    public void rechargerDonnees() {
+        this.tousLesMedias = mediaDao.trouverTous();
+    }
+
+    public Optional<Media> trouverMediaParId(UUID id) {
+        return mediaDao.trouverParId(id);
+    }
+
+    public Media ajouterMedia(Media media) {
+        Media nouveau = mediaDao.ajouter(media);
+        rechargerDonnees();
+        return nouveau;
+    }
+
+    public boolean modifierMedia(Media media) {
+        boolean succes = mediaDao.modifier(media);
+        if (succes) {
+            rechargerDonnees();
+        }
+        return succes;
+    }
+
+    public boolean supprimerMedia(UUID id) {
+        boolean succes = mediaDao.supprimer(id);
+        if (succes) {
+            rechargerDonnees();
+        }
+        return succes;
     }
 
     public List<Media> filtrer(String rechercheTextuelle,
