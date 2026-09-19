@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12.0" prefWidth="500.0" stylesheets="@../style/theme.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maisonneuve.netflix.controller.FormulaireMediaController">
+    <padding>
+        <Insets top="15.0" right="20.0" bottom="15.0" left="20.0" />
+    </padding>
+    <children>
+        <Label fx:id="lblTitreFormulaire" styleClass="section-header" text="Ajouter un Média" />
+        <GridPane hgap="10.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="120.0" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <children>
+                <Label text="Type de Média :" />
+                <ComboBox fx:id="comboTypeMedia" prefWidth="200.0" GridPane.columnIndex="1" />
+
+                <Label text="Titre :" GridPane.rowIndex="1" />
+                <TextField fx:id="txtTitre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Titre Original :" GridPane.rowIndex="2" />
+                <TextField fx:id="txtTitreOriginal" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Année :" GridPane.rowIndex="3" />
+                <TextField fx:id="txtAnnee" promptText="Ex: 2022" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Note (0.0 - 10.0) :" GridPane.rowIndex="4" />
+                <TextField fx:id="txtNote" promptText="Ex: 8.5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Genre :" GridPane.rowIndex="5" />
+                <ComboBox fx:id="comboGenre" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label text="Réalisateur :" GridPane.rowIndex="6" />
+                <TextField fx:id="txtRealisateur" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <Label text="Pays :" GridPane.rowIndex="7" />
+                <TextField fx:id="txtPays" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                <!-- Champs spécifiques aux Films -->
+                <Label fx:id="lblDuree" text="Durée (minutes) :" GridPane.rowIndex="8" />
+                <TextField fx:id="txtDuree" promptText="Ex: 120" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                <!-- Champs spécifiques aux Séries -->
+                <Label fx:id="lblSaisons" text="Saisons :" GridPane.rowIndex="9" />
+                <TextField fx:id="txtSaisons" promptText="Ex: 3" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+                <Label fx:id="lblEpisodes" text="Épisodes :" GridPane.rowIndex="10" />
+                <TextField fx:id="txtEpisodes" promptText="Ex: 24" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+                <Label fx:id="lblStatut" text="Statut :" GridPane.rowIndex="11" />
+                <ComboBox fx:id="comboStatut" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+                <Label text="Description :" GridPane.rowIndex="12" />
+                <TextArea fx:id="txtDescription" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            </children>
+        </GridPane>
+
+        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+            <padding><Insets top="10.0" /></padding>
+            <children>
+                <Button onAction="#annuler" text="Annuler" />
+                <Button onAction="#sauvegarder" styleClass="button-success" text="Enregistrer" />
+            </children>
+        </HBox>
+    </children>
+</VBox>
